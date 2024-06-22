@@ -1,0 +1,75 @@
+/* Adding font from google font */
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
+
+/* general styling  */
+* {
+  box-sizing: border-box;
+}
+
+/* .attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+} */
+
+/* general styling  */
+html,
+body {
+  margin: 0;
+  height: 100%;
+  background-color: hsl(212, 45%, 89%);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+  font-family: "outfit", sans-serif;
+}
+
+/* styling the container  */
+.card-container {
+  background-color: white;
+  text-align: center;
+  padding: 15px;
+  margin: 30px;
+  border-radius: 17px;
+  justify-content: center;
+  /* height: 600px ; */
+}
+#img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+h1 {
+  color: hsl(218, 44%, 22%);
+  font-size: 19px;
+}
+p {
+  color: hsl(220, 15%, 55%);
+  font-size: 0.9em;
+}
+
+/* Adding media queries for bigger screen size */
+@media (max-width: 1440px) {
+  .card-container {
+    text-align: center;
+    padding: 15px;
+    margin: 470px;
+  }
+  #img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 10px;
+  }
+
+  h1 {
+    /* margin: 20px; */
+    color: hsl(218, 44%, 22%);
+    font-size: 19px;
+  }
+
+  p {
+    color: hsl(220, 15%, 55%);
+    font-size: 0.9em;
+  }
+}
