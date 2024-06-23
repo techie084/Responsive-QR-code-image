@@ -1,5 +1,12 @@
-/* Adding font from google font */
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@700&display=swap");
+:root {
+  --White: hsl(0, 0%, 100%);
+  --Light-gray: hsl(212, 45%, 89%);
+  --Grayish-blue: hsl(220, 15%, 55%);
+  --Dark-blue: hsl(218, 44%, 22%);
+}
+
+/* importing font family */
+@import url("https://fonts.googleapis.com/css2?family=Outfit&display=swap");
 
 /* general styling  */
 * {
@@ -10,61 +17,39 @@ html,
 body {
   margin: 0;
   height: 90vh;
-  background-color: hsl(212, 45%, 89%);
+  background-color: var(--Light-gray);
   font-family: "outfit", sans-serif;
+  font-size: 15px;
   display: grid;
   place-content: center;
 }
 
 /* styling the container  */
 .card-container {
-  background-color: white;
+  background-color: var(--White);
   text-align: center;
-  padding: 15px;
-  margin: 30px;
+  padding: 7px;
   border-radius: 17px;
   justify-content: center;
+  height: auto;
+  width: 350px;
 }
 #img {
-  max-width: 100%;
+  max-width: 320px;
   height: auto;
-  border-radius: 10px;
+  border-radius: 13px;
+  margin-top: 10px;
 }
-h1 {
-  color: hsl(218, 44%, 22%);
-  font-size: 19px;
-}
-p {
-  color: hsl(220, 15%, 55%);
-  font-size: 0.9em;
-}
-
-/* Adding media queries for bigger screen size */
-@media (max-width: 1440px) {
-  .card-container {
-    text-align: center;
-    padding: 15px;
-    margin: 470px;
-    height: auto;
-  }
-  #img {
-    max-width: 100%;
-    height: auto;
-    border-radius: 10px;
-    margin-bottom: 30px;
-  }
-
+.text {
+  margin: 15px;
+  padding: 5px;
   h1 {
-    /* margin: 20px; */
-    color: hsl(218, 44%, 22%);
-    font-size: 19px;
-    margin-bottom: 30px;
+    color: var(--Dark-blue);
+    font-size: 1.2rem;
   }
-
   p {
-    color: hsl(220, 15%, 55%);
-    font-size: 0.9em;
-    margin-bottom: 30px;
+    color: var(--Grayish-blue);
+    font-size: 1rem;
   }
 }
 
@@ -76,7 +61,46 @@ p {
   left: 0;
   font-size: 11px;
   text-align: center;
+  a {
+    text-decoration: none;
+    color: hsl(228, 45%, 44%);
+  }
 }
-.attribution a {
-  color: hsl(228, 45%, 44%);
+
+/* mobile design */
+@media screen and (max-width: 375px) {
+  .card-container {
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+    padding: 10px;
+    width: 350px;
+    height: auto;
+    justify-content: center;
+    overflow: auto;
+    border-radius: 20px;
+  }
+  #img {
+    display: flex;
+    flex-flow: column wrap;
+    max-width: 310px;
+    height: auto;
+    border-radius: 15px;
+    margin: 5px 10px;
+  }
+  .text {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: center;
+    margin: 10px;
+    padding: 5px;
+    h1 {
+      color: var(--Dark-blue);
+      font-size: 1.2rem;
+    }
+    p {
+      color: var(--Grayish-blue);
+      font-size: 1rem;
+    }
+  }
 }
